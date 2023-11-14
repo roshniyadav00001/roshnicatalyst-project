@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" type="text/css"  hrf="css/bootstrap.css">
+    <style>
+        *{ 
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            display: flex;
+            width: 100%;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            background:linear-gradient(to right, rgb(148, 148, 187),rgb(132, 175, 132),rgb(190, 190, 120));
+             
+        }
+        .calculator{
+            padding: 20px;
+            border: 5px solid;
+            background:linear-gradient(to bottom, rgb(113, 109, 109),rgb(16, 13, 13));
+            border-radius: 20px;
+            box-shadow: 5px 10px 15px black;
+            
+        }
+        #screen{
+            height: 60px;
+            width: 85%;
+            border-radius: 20px;            
+            background:linear-gradient(rgb(159, 101, 112),rgb(104, 104, 153));
+            box-shadow: 5px 5px 5px black ;
+            margin-bottom: 10px;
+            padding: 20px;
+            border: 1px solid;
+            color: rgb(18, 18, 195);
+        }
+        button{
+           background-color: rgb(161, 155, 155);
+           color: black;
+            padding: 20px;
+            margin:5px;
+            font-size: 20px;
+            border-radius: 20px;
+            box-shadow: 5px 5px 10px rgb(135, 125, 125);
+        }
+        button:active{
+            background-color:green;
+            color: black;
+        }
+        .btnc{
+        color: rgb(152, 31, 31);
+        background-color: rgb(104, 85, 85);
+        }
+        .btn{
+           background-color: darkgreen;
+            margin-right: 13px;
+        }
+        .btnb{ 
+            color: rgb(56, 129, 56);
+             margin-right: 13px;
+        }
+        .buttns{
+            margin-right: 13px;
+        }
+        h2{
+            color: blue;
+            padding: 10px;
+            font-size: 30px;
+        }
+        audio{
+            display: none;
+        }
+       
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        
+        
+        <div class="calculator">
+            <h2>Calculator</h2>
+            <div id="screen" ></div> 
+                 <div class="">
+                    <button onclick="cls()" class="btnc">AC</button>
+                    <button onclick="indec()" class="btnb">(</button>
+                    <button onclick="percent()" class="btnb">)</button>    
+                    <button onclick="devi()"  class="btnb">/</button>
+
+                 </div>
+
+                 <div class="">
+                    <button onclick="seven()"  class="buttns">7</button>
+                    <button onclick="eight()"  class="buttns">8</button>
+                    <button onclick= "nine()"  class="buttns">9</button>
+                    <button onclick="multi()"  class="btnb">x</button>
+                 </div>
+
+                 <div class="">
+                    <button onclick="four()"  class="buttns">4</button>
+                    <button onclick="five()"  class="buttns">5</button>
+                    <button onclick="six()"  class="buttns">6</button>
+                    <button onclick="minus()"  class="btnb">-</button>
+                 </div>
+
+                 <div class="">
+                    <button onclick="one()"  class="buttns">1</button>
+                    <button onclick="two()"  class="buttns">2</button>
+                    <button onclick="three()"  class="buttns">3</button>
+                    <button onclick="plus()"  class="btnb">+</button>
+                 </div>
+
+                 <div class="">
+                    <button onclick="zero()"  class="buttns">0</button>
+                    <button onclick="dot()"  class="buttns">.</button>
+                    <button onclick="del()"  class="buttns">C</button>
+                    <button onclick="result()"  class="btn">=</button>
+                     
+                 </div>
+
+           
+        </div>
+        
+        <audio  controls id="audio">
+            <source src="audio/music.wav" type="audio/wav">
+        </audio>
+    </div>
+</body>
+<!-- <script src="js/bootstrap.js"></script> -->
+<script>
+  
+    var screen= document.getElementById("screen")
+    var audio= document.getElementById("audio")
+
+function nine(){
+    screen.innerHTML += 9
+    audio.play()
+
+}
+
+function eight(){
+    screen.innerHTML+= 8
+    audio.play()
+}
+
+
+function seven(){
+    screen.innerHTML+= 7
+    audio.play()
+}
+
+function six(){
+    screen.innerHTML+= 6
+    audio.play()
+}
+
+function five(){
+    screen.innerHTML+= 5
+    audio.play()
+}
+
+function four(){
+    screen.innerHTML+= 4
+    audio.play()
+}
+
+function three(){
+    screen.innerHTML+= 3
+    audio.play()
+}
+function two(){
+    screen.innerHTML+= 2
+    audio.play()
+}
+function one(){
+    screen.innerHTML+= 1
+    audio.play()
+}
+function zero(){
+    screen.innerHTML+= 0
+    audio.play()
+}
+
+function plus(){
+    screen.innerHTML+= '+'
+    audio.play()
+}
+function minus(){
+    screen.innerHTML+= '-'
+    audio.play()
+}
+function multi(){
+    screen.innerHTML+= '*'
+    audio.play()
+}
+function devi(){
+    screen.innerHTML+= '/'
+    audio.play()
+}
+function percent(){
+    screen.innerHTML+= ')'
+    audio.play()
+}
+function indec(){
+    screen.innerHTML+= '('
+    audio.play()
+}
+function result(){
+    screen.innerHTML= eval(screen.innerHTML)
+    audio.play()
+}
+function cls(){
+
+    screen.innerHTML=''
+    audio.play()
+
+}
+function del()
+{
+    screen.innerHTML= screen.innerHTML.slice(0,-1);
+    audio.play()
+}
+</script>
+<!-- <script src="calculator.js"></script> -->
+</html>

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"  />
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        section{
+            position: relative;
+            width: 100%;
+            min-height: 100vh;
+            padding: 100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #fff;
+            border: 2px solid rgb(30, 90, 30);
+            box-shadow: 10px 15px 25px black;
+        }
+        header{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header .logo{
+            position: relative;
+            max-width: 100px;
+            border-radius: 50%;
+        }
+        header ul li{
+            list-style: none;
+            display: inline-block;
+    
+        }
+        header ul li a{
+            display: inline-block;
+            color: #333;
+            font-weight: 400;
+            margin-left: 40px;
+            text-decoration: none;
+        }
+        header ul li a:hover{
+            background-color: green;
+            padding: 20px;
+            border-radius: 25px;
+            color: white;
+        }
+        .content{
+            position: relative;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .content .textBox{
+            position: relative;
+            max-width: 600px;
+
+        }
+        .content .textBox h2{
+            color: #333;
+            font-size: 4em;
+            line-height: 1.4em;
+            font-weight: 500;
+        }
+        .content .textBox h2 span{
+            color: #017143;
+            font-size: 1.2em;
+            font-weight: 900;
+
+        }
+        .content .textBox p{
+            color: #333;
+        }
+        .content .textBox a{
+            display: inline-block;
+            margin-top: 20px;
+            background: #226f2e;
+            color: #fff;
+            padding: 20px;
+            border-radius: 40px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-decoration: none;
+        }
+        .content .imgBox{
+            width: 600px;
+            display: flex;
+            justify-content: flex-end;
+            padding-right: 50px;
+            margin-top: 50px;
+            background: transparent;
+        }
+        .content .imgBox img{
+            max-width: 340px;
+
+        }
+        .thumb{
+            position: absolute;
+            left: 400px;
+            bottom: 20px;
+            transform: translate(-80s);
+            display: flex;
+        }
+        .thumb li{
+            list-style: none;
+            display: inline-block;
+            margin: 0 28px;
+            cursor: pointer;
+           transform: 0.8s;
+        }
+
+        .thumb li:hover{
+            transform: translate(-20px);
+        }
+        .thumb li img{
+            max-width: 80px;
+            background: transparent;
+        }
+        .thumb li img onclick{
+            max-width: 80px;
+            background: transparent;
+        }
+        .sci{
+            position: absolute;
+            top: 300px;
+            right: 30px;
+            transform: translate(-50%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            font-size: 50px;
+        }
+        .sci li{
+            list-style: none;
+        
+        }
+        .sci li a{
+            display: inline-block;
+            margin: 5px 0;
+            transform: scale(0.6);
+        }
+        .sci li a i{
+            color: #fff;
+        }
+        .circle{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #017143;
+            clip-path: circle(600px at right 800px);
+        }
+    </style>
+</head>
+<body>
+   
+    <section>
+         
+        <div class="circle"></div> 
+    <header>
+       <a href="#" ><img src="https://upload.wikimedia.org/wikipedia/en/thumb/d/d3/Starbucks_Corporation_Logo_2011.svg/1200px-Starbucks_Corporation_Logo_2011.svg.png" class="logo"> </a>
+       <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Menu</a></li>
+        <li><a href="#">What's New</a></li>
+        <li><a href="#">Contact</a></li>
+       </ul>
+    </header>
+    <div class="content">
+        <div class="textBox">
+            <h2>It's not just Coffee<br>It's<span>Starbucks</span></h2>
+            <p>Lorem ipsum dolor sit amet, consecteture adipisicing elit, sed do eiusmodtempor incididunt ut labore magna aligna.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p>
+            <a href="#">Learn More</a>
+            </div>
+            <div class="imgBox">
+                <img src="images/img1.png" class="starbucks">
+            </div>
+
+    </div>
+    <ul class="thumb">
+        <li><img src="images/thumb1.png" onclick="imgslider('images/img1.png');changeCircleColor('darkgreen')"></li>
+        <li><img src="images/thumb2.png" onclick="imgslider('images/img2.png');changeCircleColor('brown')"></li>
+        <li><img src="images/thumb3.png" onclick="imgslider('images/img3.png');changeCircleColor('pink')"></li>
+    </ul>
+    <ul class="sci">
+        <li><a href="#"> <i class="fa-brands fa-facebook"></i></a></li>
+        <li><a href="#"> <i class=" fa-brands fa-twitter"></i> </a></li>
+        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+    </ul> 
+</section>
+
+</body>
+<script type="text/javascript">
+    function imgslider(anything){
+        document.querySelector('.starbucks').src=anything;
+    }
+
+    function changeCircleColor(color){
+        const circle= document.querySelector('.circle');
+        circle.style.background = color;
+
+    }
+    
+</script>
+</html>
